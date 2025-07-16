@@ -57,24 +57,68 @@
     <p>Bei Fragen zur Datenschutzerklärung wenden Sie sich bitte an: ajabajacaja@googlemail.com</p>
   </div>
 
+  <div id="es" class="lang-section">
+    <h2>Política de Privacidad</h2>
+    <p><strong>Última actualización:</strong> [Date]</p>
+    <p><strong>Sus datos, su privacidad</strong></p>
+    <ul>
+      <li>La aplicación Blood Pressure Analyzer almacena todos sus datos de salud <strong>localmente en su dispositivo</strong>.</li>
+      <li>No se envían datos a nosotros ni a ningún servidor externo.</li>
+      <li>Si habilita HealthKit, sus datos también se sincronizarán con Apple Health, según sus preferencias y la política de privacidad de Apple.</li>
+      <li>No <strong>recopilamos</strong>, rastreamos ni analizamos el uso de la aplicación.</li>
+      <li>No se utilizan análisis de terceros, anuncios ni intercambio de datos.</li>
+      <li>Todos los datos permanecen en su dispositivo a menos que los exporte explícitamente (por ejemplo, como PDF o CSV).</li>
+    </ul>
+    <p><strong>Eliminación de datos</strong></p>
+    <ul>
+      <li>Puede eliminar sus datos de salud en cualquier momento eliminándolos en la aplicación o desinstalando la aplicación.</li>
+      <li>Si ha habilitado HealthKit, la eliminación de datos de HealthKit debe hacerse en la app Salud.</li>
+    </ul>
+    <p><strong>Contacto</strong></p>
+    <p>Si tiene preguntas sobre esta política de privacidad, comuníquese a: ajabajacaja@googlemail.com</p>
+  </div>
+
+  <div id="it" class="lang-section">
+    <h2>Informativa sulla Privacy</h2>
+    <p><strong>Ultimo aggiornamento:</strong> [Date]</p>
+    <p><strong>I tuoi dati, la tua privacy</strong></p>
+    <ul>
+      <li>L'app Blood Pressure Analyzer memorizza tutti i tuoi dati sanitari <strong>localmente sul tuo dispositivo</strong>.</li>
+      <li>Nessun dato viene mai inviato a noi o a server esterni.</li>
+      <li>Se abiliti HealthKit, i tuoi dati saranno sincronizzati anche con Apple Health secondo le tue preferenze e le politiche sulla privacy di Apple.</li>
+      <li>Non <strong>raccolgliamo</strong>, tracciamo o analizziamo l'utilizzo dell'app.</li>
+      <li>Nessun servizio di analisi di terze parti, pubblicità o condivisione dei dati viene utilizzato.</li>
+      <li>Tutti i dati rimangono sul tuo dispositivo a meno che non li esporti esplicitamente (ad esempio come PDF o CSV).</li>
+    </ul>
+    <p><strong>Cancellazione dei dati</strong></p>
+    <ul>
+      <li>Puoi cancellare i tuoi dati sanitari in qualsiasi momento eliminandoli nell'app o disinstallando l'app stessa.</li>
+      <li>Se hai abilitato HealthKit, la cancellazione dei dati da HealthKit deve essere effettuata nell'app Salute.</li>
+    </ul>
+    <p><strong>Contatto</strong></p>
+    <p>Per qualsiasi domanda su questa informativa sulla privacy, contattaci a: ajabajacaja@googlemail.com</p>
+  </div>
+
   <div class="lang-switcher">
     <button class="lang-btn" onclick="showLang('en')">English</button>
     <button class="lang-btn" onclick="showLang('de')">Deutsch</button>
+    <button class="lang-btn" onclick="showLang('es')">Español</button>
+    <button class="lang-btn" onclick="showLang('it')">Italiano</button>
   </div>
 
   <script>
     function showLang(lang) {
-      document.getElementById('en').classList.remove('visible');
-      document.getElementById('de').classList.remove('visible');
+      ['en','de','es','it'].forEach(function(code){
+        document.getElementById(code).classList.remove('visible');
+      });
       document.getElementById(lang).classList.add('visible');
     }
     // Auto-detect browser language
-    const userLang = navigator.language || navigator.userLanguage;
-    if (userLang && userLang.startsWith('de')) {
-      showLang('de');
-    } else {
-      showLang('en');
-    }
+    const userLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+    if (userLang.startsWith('de')) showLang('de');
+    else if (userLang.startsWith('es')) showLang('es');
+    else if (userLang.startsWith('it')) showLang('it');
+    else showLang('en');
   </script>
 </body>
 </html>
