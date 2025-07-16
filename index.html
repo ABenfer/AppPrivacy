@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blood Pressure Analyzer Privacy Policy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { max-width: 650px; margin: 40px auto; font-family: Arial, sans-serif; padding: 1em; }
+    .lang-section { display: none; }
+    .visible { display: block; }
+    .lang-switcher { margin-top: 1em; }
+    .lang-btn { margin-right: 10px; }
+  </style>
+</head>
+<body>
+  <h1 id="policy-title">Privacy Policy</h1>
+
+  <div id="en" class="lang-section">
+    <h2>Privacy Policy</h2>
+    <p><strong>Last updated:</strong> [Date]</p>
+    <p><strong>Your Data, Your Privacy</strong></p>
+    <ul>
+      <li>The Blood Pressure Analyzer app stores all your health data <strong>locally on your device</strong>.</li>
+      <li>No data is ever sent to us or any external servers.</li>
+      <li>If you enable HealthKit, your data will also be synced with Apple Health, according to your preferences and Apple’s privacy policies.</li>
+      <li>We do <strong>not</strong> collect, track, or analyze your usage of the app.</li>
+      <li>No third-party analytics, ads, or data sharing is used.</li>
+      <li>All data stays on your device unless you explicitly export it (e.g., as PDF or CSV).</li>
+    </ul>
+    <p><strong>Data Deletion</strong></p>
+    <ul>
+      <li>You can delete your health data at any time by removing it in the app or uninstalling the app.</li>
+      <li>If you have enabled HealthKit, deleting data from HealthKit must be done in the Health app.</li>
+    </ul>
+    <p><strong>Contact</strong></p>
+    <p>If you have questions about this privacy policy, please contact: ajabajacaja@googlemail.com</p>
+  </div>
+
+  <div id="de" class="lang-section">
+    <h2>Datenschutzerklärung</h2>
+    <p><strong>Zuletzt aktualisiert:</strong> [Datum]</p>
+    <p><strong>Ihre Daten, Ihr Datenschutz</strong></p>
+    <ul>
+      <li>Die App "Blood Pressure Analyzer" speichert alle Ihre Gesundheitsdaten <strong>lokal auf Ihrem Gerät</strong>.</li>
+      <li>Es werden <strong>keine Daten an uns oder an externe Server übertragen</strong>.</li>
+      <li>Wenn Sie HealthKit aktivieren, werden Ihre Daten entsprechend Ihren Einstellungen zusätzlich mit Apple Health synchronisiert. Hierfür gelten die Datenschutzbestimmungen von Apple.</li>
+      <li>Wir erheben, speichern oder analysieren keine Nutzungsdaten der App.</li>
+      <li>Es gibt <strong>keine Drittanbieter-Analytik, Werbung oder Datenweitergabe</strong>.</li>
+      <li>Alle Daten bleiben auf Ihrem Gerät, außer Sie exportieren sie selbst (z.B. als PDF oder CSV).</li>
+    </ul>
+    <p><strong>Löschen der Daten</strong></p>
+    <ul>
+      <li>Sie können Ihre Gesundheitsdaten jederzeit in der App löschen oder durch das Deinstallieren der App entfernen.</li>
+      <li>Falls Sie HealthKit nutzen, müssen Sie die Daten gegebenenfalls zusätzlich in der Health-App löschen.</li>
+    </ul>
+    <p><strong>Kontakt</strong></p>
+    <p>Bei Fragen zur Datenschutzerklärung wenden Sie sich bitte an: ajabajacaja@googlemail.com</p>
+  </div>
+
+  <div class="lang-switcher">
+    <button class="lang-btn" onclick="showLang('en')">English</button>
+    <button class="lang-btn" onclick="showLang('de')">Deutsch</button>
+  </div>
+
+  <script>
+    function showLang(lang) {
+      document.getElementById('en').classList.remove('visible');
+      document.getElementById('de').classList.remove('visible');
+      document.getElementById(lang).classList.add('visible');
+    }
+    // Auto-detect browser language
+    const userLang = navigator.language || navigator.userLanguage;
+    if (userLang && userLang.startsWith('de')) {
+      showLang('de');
+    } else {
+      showLang('en');
+    }
+  </script>
+</body>
+</html>
